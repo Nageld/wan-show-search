@@ -25,7 +25,7 @@ export const Searchbar = function FormikExample({ updater, data }: { updater: (n
       onSubmit={(values, actions) => {
         setTimeout(async () => {
           try {
-          const res = await fetch("http://141.148.63.115:5000/search?query=" + values.name);
+          const res = await fetch("https://141.148.63.115:5000/search?query=" + values.name);
           data.length = 0
           dummy.length = 0
           updater(data)
