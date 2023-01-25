@@ -21,7 +21,7 @@ export const Searchbar = function FormikExample({ updater, data }: { updater: (n
 
   return (
     <Formik
-      initialValues={{ name: 'Gpu Prices' }}
+      initialValues={{ name: '' }}
       onSubmit={(values, actions) => {
         setTimeout(async () => {
           try {
@@ -48,7 +48,7 @@ export const Searchbar = function FormikExample({ updater, data }: { updater: (n
           <Field name='name' validate={validateName}>
             {({ field, form }: { field: any; form: any; }): JSX.Element => (
               <FormControl isInvalid={form.errors.name && form.touched.name}>
-                <Input {...field} placeholder='Gpu Prices' />
+                <Input {...field} placeholder='' />
                 <FormErrorMessage>{form.errors.name}</FormErrorMessage>
               </FormControl>
             )}
